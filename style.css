@@ -638,6 +638,14 @@ svg {
     padding-top: 1rem;
   }
 
+  .ui-component-button-normal:hover {
+    transition: all 0.1s ease-in-out;
+
+    /*transform: scaleY(1.1) scaleX(1.05);*/
+
+    transform: translateY(-10%);
+  }
+
   /*------------------------------------------------------------
   |
   | CARD
