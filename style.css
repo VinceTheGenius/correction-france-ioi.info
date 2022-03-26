@@ -49,6 +49,7 @@ TABLE OF CONTENT
   --ui-color-n-500: #353535;
   --ui-color-n-700: #282828;
   --ui-color-n-900: #1a1a1a;
+  --ui-color-n-900-bis: rgba(26, 26, 26, .1);
 
   /* BACKGROUND COLOR */
   
@@ -188,6 +189,15 @@ small { font-size: var(--ui-typography-s); }
 .ui-text-note {
   color: var(--ui-color-typography-note);
   line-height: 1;
+}
+
+.ui-text-link {
+  color: var(--ui-color-typography-note);
+}
+
+.ui-text-link:hover {
+  color: var(--ui-color-brand);
+  transition: all 0.1s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -640,10 +650,8 @@ svg {
 
   .ui-component-button-normal:hover {
     transition: all 0.1s ease-in-out;
-
-    /*transform: scaleY(1.1) scaleX(1.05);*/
-
     transform: translateY(-10%);
+    box-shadow: 0 .4rem 6rem var(--ui-color-n-900-bis);
   }
 
   /*------------------------------------------------------------
