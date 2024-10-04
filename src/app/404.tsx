@@ -1,17 +1,12 @@
-// app/404.tsx
+import React from "react";
+import Link from "next/link";
 
-import Link from 'next/link';
-import { FC } from 'react';
-
-const Custom404: FC = () => {
+const Custom404 = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-6xl font-bold text-red-600">404</h1>
-      <h2 className="text-2xl mb-4">Page introuvable</h2>
-      <p className="mb-6">Désolé, la page que vous cherchez n'existe pas.</p>
-      <Link href="/">
-        <a className="text-blue-500 hover:underline">Retour à l'accueil</a>
-      </Link>
+    <div>
+      <h1>404 - Page non trouvée</h1>
+      <p>Il s&apos;agit d&apos;une page qui n&apos;existe pas.</p>
+      <Link href="/">Retour à la page principale</Link>
     </div>
   );
 };
