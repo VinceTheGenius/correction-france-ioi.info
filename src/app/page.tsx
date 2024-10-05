@@ -87,7 +87,7 @@ const Explorer = () => {
     if (contenuFichier) {
       await navigator.clipboard.writeText(contenuFichier);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 1200);
     }
   };
 
