@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
+// Définissez une interface pour le contenu
+interface Arborescence {
+  [key: string]: Record<string, string> | null; // Vous pouvez ajuster le type selon la structure de vos données
+}
+
 const Explorer = () => {
-  const [arborescence, setArborescence] = useState<Record<string, unknown>>({});
+  const [arborescence, setArborescence] = useState<Arborescence>({});
   const [contenuFichier, setContenuFichier] = useState<string | null>(null);
   const [dossiersOuverts, setDossiersOuverts] = useState<Record<string, boolean>>({});
   const [copied, setCopied] = useState<boolean>(false);
@@ -13,7 +18,7 @@ const Explorer = () => {
   useEffect(() => {
     const fetchArborescence = async () => {
       const response = await fetch("/api/niveau1");
-      const data = await response.json();
+      const data: Arborescence = await response.json(); // Assurez-vous que les données correspondent à l'interface définie
       setArborescence(data);
     };
 
@@ -37,13 +42,13 @@ const Explorer = () => {
     }));
   };
 
-  const renderArborescence = (arborescence: Record<string, unknown>) => {
+  const renderArborescence = (arborescence: Arborescence) => {
     return Object.entries(arborescence).map(([nom, contenu]) => (
       <div key={nom} className="mb-2">
         <h3
           className="font-semibold flex items-center cursor-pointer"
           onClick={() => {
-            if (typeof contenu === 'object') {
+            if (typeof contenu === 'object' && contenu !== null) {
               toggleDossier(nom);
             }
           }}
