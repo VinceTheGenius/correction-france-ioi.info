@@ -3,23 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;   /* Fond clair */
+  --foreground: #171717;   /* Texte sombre */
+  --sidebar-bg: #F5F5F5;   /* Fond de la sidebar */
+  --content-bg: #FAFAFA;   /* Fond de la partie droite */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a;   /* Fond sombre */
+    --foreground: #ededed;   /* Texte clair */
+    --sidebar-bg: #2c2c2c;   /* Fond sombre pour la sidebar */
+    --content-bg: #3c3c3c;   /* Fond un peu plus clair pour la partie droite */
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Styles supplémentaires pour forcer les éléments à utiliser les variables */
+.sidebar {
+  background-color: var(--sidebar-bg);  /* Applique la couleur de fond de la sidebar */
+}
+
+.content {
+  background-color: var(--content-bg);  /* Applique la couleur de fond de la partie droite */
+}
+
+/* Forcer la couleur de texte et de fond pour les dossiers */
+.folder-icon {
+  color: var(--foreground);
+}
+
+.warning-banner {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Utilitaire pour équilibrer le texte */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
