@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,13 +16,13 @@ const geistMono = localFont({
 
 // Métadonnées de votre page
 export const metadata: Metadata = {
-  title: "Corrigés France IOI Python", // Titre de la page
+  title: "Corrigés France IOI Python",
   description: "Accédez aux corrigés des exercices du niveau 1 de France IOI pour améliorer vos compétences en programmation Python.",
-  keywords: ["corrigés", "France IOI", "exercices de programmation", "Niveau 1", "algorithmique", "Python"], // Mots-clés pertinents
-  applicationName: "Corrigés France IOI Python", // Nom de votre application
-  viewport: "width=device-width, initial-scale=1.0", // Configuration pour le responsive
-  robots: "index, follow", // Indications pour les robots des moteurs de recherche
-  themeColor: "#FFFFFF", // Couleur de thème
+  keywords: ["corrigés", "France IOI", "exercices de programmation", "Niveau 1", "algorithmique", "Python"],
+  applicationName: "Corrigés France IOI Python",
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
@@ -35,6 +36,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* Inclure le composant Analytics */}
+        <Analytics />
       </body>
     </html>
   );
