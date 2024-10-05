@@ -3,9 +3,9 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 
 // Fonction asynchrone pour obtenir la structure des fichiers et dossiers
-const getFiles = async (dir: string): Promise<Record<string, any>> => {
+const getFiles = async (dir: string): Promise<Record<string, unknown>> => {
   const files = await fs.readdir(dir);
-  const structure: Record<string, any> = {};
+  const structure: Record<string, unknown> = {};
 
   for (const file of files) {
     const fullPath = path.join(dir, file);
@@ -16,7 +16,7 @@ const getFiles = async (dir: string): Promise<Record<string, any>> => {
       structure[file] = await getFiles(fullPath);
     } else {
       // Les fichiers sont ajoutés directement
-      structure[file] = null; // ou vous pouvez mettre le chemin relatif du fichier
+      structure[file] = null;
     }
   }
 

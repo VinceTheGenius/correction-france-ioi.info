@@ -5,10 +5,9 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const Explorer = () => {
-  const [arborescence, setArborescence] = useState<{ [key: string]: any }>({});
-  const [fichierSelectionné, setFichierSelectionné] = useState<string | null>(null);
+  const [arborescence, setArborescence] = useState<Record<string, unknown>>({});
   const [contenuFichier, setContenuFichier] = useState<string | null>(null);
-  const [dossiersOuverts, setDossiersOuverts] = useState<{ [key: string]: boolean }>({});
+  const [dossiersOuverts, setDossiersOuverts] = useState<Record<string, boolean>>({});
   const [copied, setCopied] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const Explorer = () => {
     if (response.ok) {
       const contenu = await response.text();
       setContenuFichier(contenu);
-      setFichierSelectionné(cheminFichier);
     } else {
       console.error("Erreur lors du chargement du fichier:", cheminFichier);
     }
@@ -39,7 +37,7 @@ const Explorer = () => {
     }));
   };
 
-  const renderArborescence = (arborescence: { [key: string]: any }) => {
+  const renderArborescence = (arborescence: Record<string, unknown>) => {
     return Object.entries(arborescence).map(([nom, contenu]) => (
       <div key={nom} className="mb-2">
         <h3
@@ -93,7 +91,6 @@ const Explorer = () => {
 
   return (
     <div className="flex flex-col h-screen">
-      {/* Bannière en haut */}
       <div className="bg-yellow-300 text-center py-2 font-bold">
         Corrigés du Niveau 1 de France IOI (niveau obligatoire)  
         <div className="flex items-center justify-center mt-2">
