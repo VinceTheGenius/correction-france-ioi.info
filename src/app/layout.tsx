@@ -26,19 +26,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+      <html lang="fr">
+      <head>
+        {/* Ajouter la balise meta pour Google AdSense */}
+        <meta name="google-adsense-account" content="ca-pub-5778255533062834" />
+        {/* Ajoutez d'autres balises meta ou liens ici si nécessaire */}
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        {/* Inclure le composant Analytics */}
-        <Analytics />
+      {children}
+      {/* Inclure le composant Analytics */}
+      <Analytics />
       </body>
-    </html>
+      </html>
   );
 }
