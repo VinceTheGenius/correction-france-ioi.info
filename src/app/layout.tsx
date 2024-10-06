@@ -16,10 +16,10 @@ const geistMono = localFont({
 
 // Métadonnées de votre page
 export const metadata: Metadata = {
-  title: "Corrigés France IOI Python",
-  description: "Accédez aux corrigés des exercices du niveau 1 de France IOI pour améliorer vos compétences en programmation Python.",
-  keywords: ["corrigés", "France IOI", "exercices de programmation", "Niveau 1", "algorithmique", "Python"],
-  applicationName: "Corrigés France IOI Python",
+  title: "Correction France IOI",
+  description: "Accédez aux corrections des exercices de France IOI pour améliorer vos compétences en programmation Python.",
+  keywords: ["Correction", "France IOI", "exercices de programmation", "Niveau 1", "algorithmique", "Python"],
+  applicationName: "Correction France IOI",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   themeColor: "#FFFFFF",

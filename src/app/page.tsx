@@ -97,7 +97,8 @@ const Explorer = () => {
   return (
       <div className="flex flex-col h-screen">
         <div className="bg-yellow-300 text-center py-2 font-bold text-black">
-          Corrigés du Niveau 1 de France IOI (niveau obligatoire)
+          Correction du Niveau 1 de France IOI (niveau obligatoire) <br/>
+          D&apoautres corrigés arrivent très prochainement.
           <div className="flex items-center justify-center mt-2">
             <img
                 src="/icons/warning.png"
