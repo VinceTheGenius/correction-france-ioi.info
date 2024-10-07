@@ -176,7 +176,7 @@ const Explorer = () => {
             {/* Footer */}
             <footer className="bg-gray-200 text-center py-2 text-black">
                 <span>
-                    Pour toute question ou demande d&apos;ajout d&apos;autre langage (C++), veuillez nous contacter :{' '}
+                    Pour toute question ou demande d&apos;ajout d&apos;autre langage (C++ par exemple), veuillez nous contacter :{' '}
                     <Link href="mailto:contact@correction-france-ioi.site" className="underline text-blue-600">
                         contact@correction-france-ioi.site
                     </Link>
