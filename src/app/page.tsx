@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image"; // Import de la balise Image
+import Link from 'next/link'; // Import du lien mailto
 
 // Interface pour le contenu
 interface Arborescence {
@@ -137,10 +138,10 @@ const Explorer = () => {
                         className="mr-2"
                     />
                     <span className="opacity-70 text-black">
-            Nb : il est très fortement conseillé de faire les exercices
-            soi-même. Ces corrigés sont uniquement là pour vous débloquer sur
-            certains exercices.
-          </span>
+                        Nb : il est très fortement conseillé de faire les exercices
+                        soi-même. Ces corrigés sont uniquement là pour vous débloquer sur
+                        certains exercices.
+                    </span>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row flex-grow">
@@ -172,6 +173,15 @@ const Explorer = () => {
                     )}
                 </div>
             </div>
+            {/* Footer */}
+            <footer className="bg-gray-200 text-center py-2 text-black">
+                <span>
+                    Pour toute question ou demande d&apos;ajout d&apos;autre langage (C++), veuillez nous contacter :{' '}
+                    <Link href="mailto:contact@correction-france-ioi.site" className="underline text-blue-600">
+                        contact@correction-france-ioi.site
+                    </Link>
+                </span>
+            </footer>
         </div>
     );
 };
