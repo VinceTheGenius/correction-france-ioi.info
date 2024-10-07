@@ -36,7 +36,6 @@ const Explorer = () => {
             setTimeout(() => {
                 if (contenuSectionRef.current) {
                     const rect = contenuSectionRef.current.getBoundingClientRect();
-                    const isMobile = window.innerWidth <= 768; // Pour vérifier si on est en mode mobile
                     const screenHeight = window.innerHeight;
 
                     // Si le contenu est long, défiler jusqu'à afficher la section en haut
