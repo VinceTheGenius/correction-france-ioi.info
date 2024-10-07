@@ -126,7 +126,7 @@ const Explorer = () => {
 
     return (
         <div className="flex flex-col h-screen">
-            <div className="bg-yellow-300 text-center py-2 font-bold text-black">
+            <div className="bg-yellow-300 text-center py-2 font-bold text-black px-2">
                 Correction du Niveau 1 de France IOI (niveau obligatoire) <br />
                 Les corrigés des autres niveaux arrivent très prochainement.
                 <div className="flex items-center justify-center mt-2">
@@ -174,7 +174,7 @@ const Explorer = () => {
                 </div>
             </div>
             {/* Footer */}
-            <footer className="bg-gray-200 text-center py-2 text-black">
+            <footer className="bg-gray-200 text-center py-2 text-black px-2">
                 <span>
                     Pour toute question ou demande d&apos;ajout d&apos;autre langage (C++ par exemple), veuillez nous contacter :{' '}
                     <Link href="mailto:contact@correction-france-ioi.site" className="underline text-blue-600">
