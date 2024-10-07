@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import Image from "next/image"; // Import de la balise Image
 
 // Interface pour le contenu
 interface Arborescence {
@@ -77,14 +78,16 @@ const Explorer = () => {
                         }
                     }}
                 >
-                    <img
+                    <Image
                         src={
                             dossiersOuverts[nom]
                                 ? "/icons/folder-open.png"
                                 : "/icons/folder-close.png"
                         }
                         alt={dossiersOuverts[nom] ? "Dossier ouvert" : "Dossier fermé"}
-                        className="mr-2 w-5 h-5"
+                        width={20}
+                        height={20}
+                        className="mr-2"
                     />
                     {nom}
                 </h3>
@@ -96,10 +99,12 @@ const Explorer = () => {
                                 onClick={() => handleClickFichier(`${nom}/${item}`)}
                                 className="cursor-pointer py-1 flex items-center transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-contentBg dark:hover:text-white"
                             >
-                                <img
+                                <Image
                                     src="/icons/file-python.png"
                                     alt="Fichier Python"
-                                    className="mr-2 w-5 h-5"
+                                    width={20}
+                                    height={20}
+                                    className="mr-2"
                                 />
                                 {item}
                             </li>
@@ -122,12 +127,14 @@ const Explorer = () => {
         <div className="flex flex-col h-screen">
             <div className="bg-yellow-300 text-center py-2 font-bold text-black">
                 Correction du Niveau 1 de France IOI (niveau obligatoire) <br />
-                D&apos;autres corrigés arrivent très prochainement.
+                Les corrigés des autres niveaux arrivent très prochainement.
                 <div className="flex items-center justify-center mt-2">
-                    <img
+                    <Image
                         src="/icons/warning.png"
                         alt="Avertissement"
-                        className="mr-2 w-4 h-4"
+                        width={16}
+                        height={16}
+                        className="mr-2"
                     />
                     <span className="opacity-70 text-black">
             Nb : il est très fortement conseillé de faire les exercices

@@ -34,7 +34,7 @@ export default function RootLayout({
       <html lang="fr">
       <head>
         {/* Ajouter la balise meta pour Google AdSense */}
-        <meta name="google-adsense-account" content="ca-pub-5778255533062834" />
+        <meta name="google-adsense-account" content="ca-pub-5778255533062834    " />
         {/* Ajoutez d'autres balises meta ou liens ici si nécessaire */}
       </head>
       <body
