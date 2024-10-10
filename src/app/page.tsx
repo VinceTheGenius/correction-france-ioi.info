@@ -178,7 +178,7 @@ const Explorer = () => {
                 <span>
                     Pour toute question ou demande d&apos;ajout d&apos;autre langage (C++ par exemple), veuillez nous contacter :{' '}
                     <Link href="mailto:contact@correction-france-ioi.site" className="underline text-blue-600">
-                        contact@correction-france-ioi.site
+                        contact@correction-france-ioi.info
                     </Link>
                 </span>
             </footer>
