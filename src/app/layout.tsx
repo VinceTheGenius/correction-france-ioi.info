@@ -18,7 +18,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Correction France IOI",
   description: "Accédez aux corrections des exercices de France IOI pour améliorer vos compétences en programmation.",
-  keywords: ["Correction", "France IOI", "exercices de programmation", "Niveau 1", "algorithmique", "Python"],
+  keywords: ["Correction", "France IOI", "correction-france-ioi.info", "correction-france-ioi", "correction france ioi", "corrigés france ioi", "corrigés", "exercices de programmation", "Niveau 1", "algorithmique", "Python"],
   applicationName: "Correction France IOI",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
